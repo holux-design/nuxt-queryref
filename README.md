@@ -7,26 +7,20 @@ Find and replace all on all files (CMD+SHIFT+F):
 - Description: My new Nuxt module
 -->
 
-# My Module
+# `useQueryRef` - URL-persisted `ref` for Nuxt
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-My new Nuxt module for doing amazing things.
-
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-  <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-queryref?file=playground%2Fapp.vue) -->
-  <!-- - [📖 &nbsp;Documentation](https://example.com) -->
-
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
 
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- Drop-in support instead of `ref()`
+- Supports all common types (string, number, boolean, Arrays, Objects)
+- Coherently typed for good DX
 
 ## Quick Setup
 
@@ -36,7 +30,7 @@ Install the module to your Nuxt application with one command:
 npx nuxi module add nuxt-queryref
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+That's it! You can now use `useQueryRef` in your Nuxt app ✨
 
 ## Contribution
 
