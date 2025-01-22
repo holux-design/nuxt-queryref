@@ -2,17 +2,16 @@
   <div>
     Nuxt module playground!
 
-    <p>message: {{ message }}</p>
+    <p>name: {{ name }}</p>
 
-    <button @click="changeText('Hello Nuxt module!')">Change Text</button>
-    <button @click="changeText('Hello world!')">Reset Text</button>
+    <button @click="changeName()">Change Name</button>
   </div>
 </template>
 
 <script setup lang="ts">
-const message = useQueryRef('message', 'Hello world!')
+const name = useQueryRef('name', { first: 'Lukas', last: 'Smith' }, 'Object')
 
-const changeText = (text: string) => {
-  message.value = text
+const changeName = () => {
+  name.value.last = 'Hawk'
 }
 </script>
