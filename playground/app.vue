@@ -10,9 +10,9 @@
 </template>
 
 <script setup lang="ts">
-const message = useQueryRef("message", "Hello world!");
+const message = useQueryRef('message', 'Hello world!')
 
 const changeText = (text: string) => {
-  message.value = text;
-};
+  message.value = text
+}
 </script>
