@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-const name = useQueryRef('name', { first: 'Lukas', last: 'Smith' }, 'Object')
+const name = useQueryRef('name', 123)
 
 const changeName = () => {
-  name.value.last = 'Hawk'
+  name.value++
 }
 </script>
