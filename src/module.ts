@@ -15,9 +15,9 @@ export default defineNuxtModule<ModuleOptions>({
     addPlugin(resolver.resolve('./runtime/plugin'))
 
     addImports({
-      name: 'useQueryRef',
-      as: 'useQueryRef',
-      from: resolver.resolve('runtime/composables/useQueryRef'), // load composable from plugin
+      name: 'queryRef',
+      as: 'queryRef',
+      from: resolver.resolve('runtime/composables/queryRef'), // load composable from plugin
     })
   },
 })

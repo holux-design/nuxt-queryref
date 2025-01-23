@@ -4,7 +4,7 @@ declare const ref, watch
 
 type QueryParamType = 'string' | 'string[]' | 'number' | 'number[]' | 'boolean' | 'boolean[]' | 'object' | 'object[]'
 
-export const useQueryRef = <T>(key: string, defaultValue: T = null) => {
+export const queryRef = <T>(key: string, defaultValue: T = null) => {
   const type = getType(defaultValue)
 
   const loadedValue = loadQueryParamFromURL(key, type)

@@ -7,12 +7,14 @@ Find and replace all on all files (CMD+SHIFT+F):
 - Description: My new Nuxt module
 -->
 
-# `useQueryRef` - URL-persisted `ref` for Nuxt
+# `queryRef()` - URL-persisted `ref()` for Nuxt
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
+
+![](public/images/preview.gif)
 
 ## Features
 
@@ -30,7 +32,62 @@ Install the module to your Nuxt application with one command:
 npx nuxi module add nuxt-queryref
 ```
 
-That's it! You can now use `useQueryRef` in your Nuxt app ✨
+That's it! You can now use `queryRef` in your Nuxt app ✨
+
+## Usage
+
+Use `queryRef()` just like you would use a normal `ref()`
+
+```ts
+const variable = queryRef(<key>, <value>)
+```
+
+It takes two Parameters:
+
+- `<key>`: The key for the URL Query Param
+- `<value>`: The actual value, just like you would use with `ref()`
+
+Following types are supported for `<value>`:
+
+- `string`
+- `number`
+- `boolean`
+- `Object`
+- `Array (of each of the above)`
+
+---
+
+### Examples
+
+```ts
+const name = queryRef('name', 'Lukas')
+```
+
+```ts
+// With generic type (optional, default is based on <value>)
+const name = queryRef<string>('name', 'Lukas')
+```
+
+```ts
+// With Object and custom type
+const name = queryRef<{ firstName: string }>('name', { firstName: 'Lukas' })
+```
+
+## Use-cases
+
+There are multiple scenarios where URL-persisting makes sense:
+
+- In general: making URLs shareable or look the same on reload
+- Persisting **_filters or sorting_** for sharing
+- Persisting **_selected tabs or popups_**
+- Persisting **_selected image (-index)_** for e.g. a slider
+
+## Under the Hood
+
+Some insights:
+
+- The value is loaded on page load via **_useRoute()_**, which ensures that the value will already be loaded during **_SSR_** and no flickering will occur
+- If the provided value is an **_array_**, the type will be **_inferred by the first item_** of the value. Therefore mixed-type arrays are currently not supported (or will lead to problems)
 
 ## Contribution
 
