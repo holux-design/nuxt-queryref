@@ -86,6 +86,7 @@ There are multiple scenarios where URL-persisting makes sense:
 
 Some insights:
 
+- `queryRef()` uses a regular `ref()` under the hood, but adds the according loader and watcher to sync with the URL - therefore you can use your local variable exactly like a regular ref (e.g. setting like `variable.value = 'foobar'`)
 - The value is loaded on page load via **_useRoute()_**, which ensures that the value will already be loaded during **_SSR_** and no flickering will occur
 - If the provided value is an **_array_**, the type will be **_inferred by the first item_** of the value. Therefore mixed-type arrays are currently not supported (or will lead to problems)
 
