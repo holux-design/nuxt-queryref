@@ -1,10 +1,9 @@
 import { useRoute } from 'nuxt/app'
-
-declare const ref, watch
+import { ref, watch } from '#imports'
 
 type QueryParamType = 'string' | 'string[]' | 'number' | 'number[]' | 'boolean' | 'boolean[]' | 'object' | 'object[]'
 
-export const queryRef = <T>(key: string, defaultValue: T = null) => {
+export const queryRef = <T>(key: string, defaultValue: T | null = null) => {
   const type = getType(defaultValue)
 
   const loadedValue = loadQueryParamFromURL(key, type)
