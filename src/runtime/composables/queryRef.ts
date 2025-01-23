@@ -39,10 +39,10 @@ function loadQueryParamFromURL(key: string, type: QueryParamType) {
   if (!loadedString) return
 
   if (type == 'number') return +loadedString
-  if (type == 'number[]') return loadedString.split(',').map((n) => +n)
+  if (type == 'number[]') return loadedString.split(',').map(n => +n)
   if (type == 'string[]') return loadedString.split(',')
   if (type == 'boolean') return loadedString == 'true'
-  if (type == 'boolean[]') return loadedString.split(',').map((n) => n == 'true')
+  if (type == 'boolean[]') return loadedString.split(',').map(n => n == 'true')
   if (['object', 'object[]'].includes(type)) return JSON.parse(loadedString)
   return loadedString
 }

@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     '../src/module',
     '@nuxtjs/tailwindcss',
   ],
-  myModule: {},
   devtools: { enabled: true },
   compatibilityDate: '2025-01-22',
+  myModule: {},
 })
