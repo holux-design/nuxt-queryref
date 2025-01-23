@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.3
+
+[compare changes](https://github.com/holux-design/nuxt-queryref/compare/v1.0.2...v1.0.3)
+
+### 🩹 Fixes
+
+- Add import for ref, watch ([79cf050](https://github.com/holux-design/nuxt-queryref/commit/79cf050))
+
+### ❤️ Contributors
+
+- Holux-design <office@holux-design.at>
+
 ## v1.0.2
 
 [compare changes](https://github.com/holux-design/nuxt-queryref/compare/v1.0.1...v1.0.2)
