@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.4
+
+[compare changes](https://github.com/holux-design/nuxt-queryref/compare/v1.0.3...v1.0.4)
+
+### 🩹 Fixes
+
+- Bug where defaultValue would overwrite and therefore break the updating in URL when compared if value not equals defaultValue ([e831f49](https://github.com/holux-design/nuxt-queryref/commit/e831f49))
+
+### ❤️ Contributors
+
+- Holux-design <office@holux-design.at>
+
 ## v1.0.3
 
 [compare changes](https://github.com/holux-design/nuxt-queryref/compare/v1.0.2...v1.0.3)
