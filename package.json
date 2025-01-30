@@ -1,6 +1,6 @@
 {
   "name": "nuxt-queryref",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "queryRef - URL-persisted ref replacement for Nuxt",
   "repository": "holux-design/nuxt-queryref",
   "license": "MIT",

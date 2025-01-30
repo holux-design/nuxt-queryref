@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.0.5
+
+[compare changes](https://github.com/holux-design/nuxt-queryref/compare/v1.0.4...v1.0.5)
+
+### 🩹 Fixes
+
+- **type:** Composable to return correct Ref<T> instead of custom { value: T } ([65194b3](https://github.com/holux-design/nuxt-queryref/commit/65194b3))
+- Lint ([c4de27f](https://github.com/holux-design/nuxt-queryref/commit/c4de27f))
+
+### ❤️ Contributors
+
+- Holux-design <office@holux-design.at>
+
 ## v1.0.4
 
 [compare changes](https://github.com/holux-design/nuxt-queryref/compare/v1.0.3...v1.0.4)
