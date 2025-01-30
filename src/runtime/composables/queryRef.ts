@@ -1,6 +1,6 @@
 import { useRoute } from 'nuxt/app'
 import { ref, watch } from '#imports'
-import { type Ref } from '#imports'
+import type { Ref } from '#imports'
 
 type QueryParamType = 'string' | 'string[]' | 'number' | 'number[]' | 'boolean' | 'boolean[]' | 'object' | 'object[]'
 
