@@ -1,5 +1,6 @@
 import { useRoute } from 'nuxt/app'
 import { ref, watch } from '#imports'
+import { type Ref } from '#imports'
 
 type QueryParamType = 'string' | 'string[]' | 'number' | 'number[]' | 'boolean' | 'boolean[]' | 'object' | 'object[]'
 
@@ -19,7 +20,7 @@ export const queryRef = <T>(key: string, defaultValue: T | null = null) => {
     { deep: true },
   )
 
-  return queryRef as { value: T }
+  return queryRef as Ref<T>
 }
 
 function updateQueryParamInURL(key, value, defaultValue, type: QueryParamType) {
